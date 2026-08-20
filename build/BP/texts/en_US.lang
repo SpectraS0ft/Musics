@@ -1,0 +1,8 @@
+pack.name=Vintage Radio
+pack.description=Placeable vintage radio with on/off toggle, animations, particles, and Lose My Mind (F1 Extended Cinematic Cut). Bedrock 1.26+
+tile.spectra:radio.name=Vintage Radio
+tile.spectra:radio_block.name=Vintage Radio
+item.spectra:radio=Vintage Radio
+item.spectra:radio.name=Vintage Radio
+entity.spectra:radio.name=Vintage Radio
+item.spawn_egg.entity.spectra:radio.name=Vintage Radio

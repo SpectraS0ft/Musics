@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "spectra:radio"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "INI",
+      "NRN",
+      "III"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "N": {
+        "item": "minecraft:note_block"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "spectra:radio",
+      "count": 1
+    }
+  }
+}

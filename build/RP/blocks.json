@@ -1,0 +1,8 @@
+{
+  "format_version": [1, 1, 0],
+  "spectra:radio_block": {
+    "textures": "spectra_radio",
+    "sound": "wood",
+    "carried_textures": "spectra_radio"
+  }
+}

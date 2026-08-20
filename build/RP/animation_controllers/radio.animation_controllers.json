@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.spectra_radio": {
+      "initial_state": "off",
+      "states": {
+        "off": {
+          "animations": ["idle"],
+          "transitions": [
+            {
+              "turning_on": "query.property('spectra:powered') == true"
+            }
+          ],
+          "blend_transition": 0.15
+        },
+        "turning_on": {
+          "animations": ["turn_on"],
+          "transitions": [
+            {
+              "on": "query.all_animations_finished && query.property('spectra:powered') == true"
+            },
+            {
+              "turning_off": "query.property('spectra:powered') == false"
+            }
+          ],
+          "blend_transition": 0.1
+        },
+        "on": {
+          "animations": ["playing"],
+          "transitions": [
+            {
+              "turning_off": "query.property('spectra:powered') == false"
+            }
+          ],
+          "blend_transition": 0.15
+        },
+        "turning_off": {
+          "animations": ["turn_off"],
+          "transitions": [
+            {
+              "off": "query.all_animations_finished && query.property('spectra:powered') == false"
+            },
+            {
+              "turning_on": "query.property('spectra:powered') == true"
+            }
+          ],
+          "blend_transition": 0.1
+        }
+      }
+    }
+  }
+}

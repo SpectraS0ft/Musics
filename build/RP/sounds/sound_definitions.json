@@ -1,0 +1,40 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "spectra.radio.on": {
+      "category": "block",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/radio/click_on",
+          "volume": 1.0,
+          "pitch": 1.1
+        }
+      ]
+    },
+    "spectra.radio.off": {
+      "category": "block",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/radio/click_off",
+          "volume": 0.9,
+          "pitch": 0.9
+        }
+      ]
+    },
+    "spectra.radio.music": {
+      "category": "music",
+      "max_distance": 48,
+      "min_distance": 0,
+      "sounds": [
+        {
+          "name": "sounds/radio/lose_my_mind",
+          "volume": 1.0,
+          "pitch": 1.0,
+          "stream": true
+        }
+      ]
+    }
+  }
+}

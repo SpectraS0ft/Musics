@@ -1,0 +1,103 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "spectra:radio_block",
+      "menu_category": {
+        "category": "items",
+        "group": "minecraft:itemGroup.name.decorations"
+      },
+      "states": {
+        "spectra:powered": [0, 1]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.8
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:geometry": "geometry.spectra_radio",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "spectra_radio",
+          "render_method": "alpha_test",
+          "ambient_occlusion": true,
+          "face_dimming": true
+        }
+      },
+      "minecraft:collision_box": {
+        "origin": [-7, 0, -4],
+        "size": [14, 14, 8]
+      },
+      "minecraft:selection_box": {
+        "origin": [-7, 0, -4],
+        "size": [14, 14, 8]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#6B4423",
+      "minecraft:display_name": "tile.spectra:radio.name",
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20
+      },
+      "minecraft:custom_components": ["spectra:radio_behavior"]
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('spectra:powered') == 1",
+        "components": {
+          "minecraft:light_emission": 6,
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "spectra_radio_on",
+              "render_method": "alpha_test",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 180, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 270, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 90, 0]
+          }
+        }
+      }
+    ]
+  }
+}

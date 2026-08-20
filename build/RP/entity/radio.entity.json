@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "spectra:radio",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/radio",
+        "on": "textures/entity/radio_on"
+      },
+      "geometry": {
+        "default": "geometry.spectra_radio"
+      },
+      "animations": {
+        "idle": "animation.spectra_radio.idle",
+        "turn_on": "animation.spectra_radio.turn_on",
+        "turn_off": "animation.spectra_radio.turn_off",
+        "playing": "animation.spectra_radio.playing",
+        "controller": "controller.animation.spectra_radio"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ],
+        "pre_animation": [
+          "variable.powered = query.property('spectra:powered') ? 1.0 : 0.0;"
+        ]
+      },
+      "spawn_egg": {
+        "base_color": "#6B4423",
+        "overlay_color": "#00FF66"
+      },
+      "render_controllers": [
+        "controller.render.spectra_radio"
+      ],
+      "particle_effects": {
+        "notes": "spectra:radio_notes",
+        "waves": "spectra:radio_waves",
+        "power_on": "spectra:radio_power_on",
+        "power_off": "spectra:radio_power_off",
+        "speaker_thump": "spectra:radio_speaker"
+      },
+      "sound_effects": {
+        "on": "spectra.radio.on",
+        "off": "spectra.radio.off"
+      }
+    }
+  }
+}
