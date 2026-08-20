@@ -1,0 +1,130 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "spectra:radio",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "spectra:powered": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "spectra:powered_on": {
+        "minecraft:is_ignited": {}
+      },
+      "spectra:powered_off": {}
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["radio", "inanimate", "mob"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.85
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "is_sneaking", "subject": "other", "value": false }
+                ]
+              }
+            },
+            "deals_damage": false
+          },
+          {
+            "cause": "void",
+            "deals_damage": true
+          },
+          {
+            "cause": "suicide",
+            "deals_damage": true
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": true
+      },
+      "minecraft:scale": {
+        "value": 1.0
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:breathable": {
+        "breathes_water": true,
+        "breathes_air": true,
+        "generates_bubbles": false
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_damage_blocks": false
+      },
+      "minecraft:movement": {
+        "value": 0.0
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["spectra:powered_off"]
+        },
+        "set_property": {
+          "spectra:powered": false
+        }
+      },
+      "spectra:force_on": {
+        "set_property": {
+          "spectra:powered": true
+        },
+        "add": {
+          "component_groups": ["spectra:powered_on"]
+        },
+        "remove": {
+          "component_groups": ["spectra:powered_off"]
+        }
+      },
+      "spectra:force_off": {
+        "set_property": {
+          "spectra:powered": false
+        },
+        "add": {
+          "component_groups": ["spectra:powered_off"]
+        },
+        "remove": {
+          "component_groups": ["spectra:powered_on"]
+        }
+      }
+    }
+  }
+}

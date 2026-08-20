@@ -1,0 +1,12 @@
+pack.name=Vintage Radio Resources
+pack.description=Textures, models, animations, particles and music for the Vintage Radio addon.
+tile.spectra:radio.name=Vintage Radio
+tile.spectra:radio_block.name=Vintage Radio
+item.spectra:radio=Vintage Radio
+item.spectra:radio.name=Vintage Radio
+entity.spectra:radio.name=Vintage Radio
+item.spawn_egg.entity.spectra:radio.name=Vintage Radio
+action.interact.toggle_radio=Toggle Radio
+subtitles.spectra.radio.on=Radio clicks on
+subtitles.spectra.radio.off=Radio clicks off
+subtitles.spectra.radio.music=Radio plays music

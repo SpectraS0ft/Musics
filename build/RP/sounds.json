@@ -1,0 +1,18 @@
+{
+  "individual_event_sounds": {
+    "events": {
+      "spectra.radio.on": {
+        "pitch": 1.0,
+        "volume": 1.0
+      },
+      "spectra.radio.off": {
+        "pitch": 1.0,
+        "volume": 1.0
+      },
+      "spectra.radio.music": {
+        "pitch": 1.0,
+        "volume": 1.0
+      }
+    }
+  }
+}

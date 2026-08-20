@@ -1,0 +1,291 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.spectra_radio.idle": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {
+        "antenna": {
+          "rotation": [
+            "math.sin(query.anim_time * 45) * 2",
+            0,
+            "math.cos(query.anim_time * 30) * 1.5"
+          ]
+        },
+        "handle": {
+          "rotation": [0, 0, 0]
+        }
+      }
+    },
+    "animation.spectra_radio.turn_on": {
+      "animation_length": 1.0,
+      "bones": {
+        "body": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.08": [2, 0, 3],
+            "0.16": [-1, 0, -2],
+            "0.28": [1, 0, 1],
+            "0.4": [0, 0, 0]
+          },
+          "position": {
+            "0.0": [0, 0, 0],
+            "0.1": [0, 0.4, 0],
+            "0.25": [0, 0, 0]
+          }
+        },
+        "tuning_knob": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.5": [0, 0, 180],
+            "1.0": [0, 0, 360]
+          }
+        },
+        "volume_knob": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.35": [0, 0, -90],
+            "0.7": [0, 0, -200]
+          }
+        },
+        "antenna": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.2": [15, 0, 10],
+            "0.45": [-5, 0, -5],
+            "0.7": [8, 0, 4],
+            "1.0": [5, 0, 0]
+          }
+        },
+        "power_led": {
+          "scale": {
+            "0.0": [1, 1, 1],
+            "0.15": [1.6, 1.6, 1.6],
+            "0.4": [1.2, 1.2, 1.2],
+            "1.0": [1.15, 1.15, 1.15]
+          }
+        },
+        "speaker_grill": {
+          "scale": {
+            "0.0": [1, 1, 1],
+            "0.3": [1.05, 1.05, 1],
+            "0.5": [0.98, 0.98, 1],
+            "0.7": [1.03, 1.03, 1],
+            "1.0": [1, 1, 1]
+          }
+        },
+        "display": {
+          "scale": {
+            "0.0": [1, 0.2, 1],
+            "0.25": [1, 1.1, 1],
+            "0.5": [1, 1, 1]
+          }
+        },
+        "handle": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.2": [5, 0, 0],
+            "0.5": [0, 0, 0]
+          }
+        }
+      },
+      "sound_effects": {
+        "0.05": [
+          { "effect": "on" }
+        ]
+      },
+      "particle_effects": {
+        "0.1": [
+          {
+            "effect": "power_on",
+            "locator": "body"
+          }
+        ],
+        "0.4": [
+          {
+            "effect": "notes",
+            "locator": "speaker_grill"
+          }
+        ]
+      }
+    },
+    "animation.spectra_radio.turn_off": {
+      "animation_length": 0.7,
+      "bones": {
+        "body": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.1": [-2, 0, -2],
+            "0.25": [1, 0, 1],
+            "0.4": [0, 0, 0]
+          },
+          "position": {
+            "0.0": [0, 0, 0],
+            "0.08": [0, 0.2, 0],
+            "0.2": [0, 0, 0]
+          }
+        },
+        "tuning_knob": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.5": [0, 0, -120]
+          }
+        },
+        "volume_knob": {
+          "rotation": {
+            "0.0": [0, 0, -200],
+            "0.45": [0, 0, 0]
+          }
+        },
+        "antenna": {
+          "rotation": {
+            "0.0": [5, 0, 0],
+            "0.3": [-8, 0, 5],
+            "0.7": [0, 0, 0]
+          }
+        },
+        "power_led": {
+          "scale": {
+            "0.0": [1.15, 1.15, 1.15],
+            "0.2": [1.4, 1.4, 1.4],
+            "0.5": [0.8, 0.8, 0.8],
+            "0.7": [1, 1, 1]
+          }
+        },
+        "display": {
+          "scale": {
+            "0.0": [1, 1, 1],
+            "0.35": [1, 0.15, 1],
+            "0.7": [1, 0.15, 1]
+          }
+        },
+        "speaker_grill": {
+          "scale": {
+            "0.0": [1, 1, 1],
+            "0.2": [1.02, 1.02, 1],
+            "0.5": [1, 1, 1]
+          }
+        }
+      },
+      "sound_effects": {
+        "0.05": [
+          { "effect": "off" }
+        ]
+      },
+      "particle_effects": {
+        "0.08": [
+          {
+            "effect": "power_off",
+            "locator": "body"
+          }
+        ]
+      }
+    },
+    "animation.spectra_radio.playing": {
+      "loop": true,
+      "animation_length": 2.0,
+      "bones": {
+        "speaker_grill": {
+          "scale": [
+            "1.0 + math.sin(query.anim_time * 720) * 0.04",
+            "1.0 + math.sin(query.anim_time * 720) * 0.04",
+            "1.0 + math.abs(math.sin(query.anim_time * 720)) * 0.06"
+          ],
+          "position": [
+            0,
+            "math.sin(query.anim_time * 720) * 0.05",
+            "math.sin(query.anim_time * 360) * -0.08"
+          ]
+        },
+        "body": {
+          "position": [
+            "math.sin(query.anim_time * 180) * 0.03",
+            "math.abs(math.sin(query.anim_time * 360)) * 0.04",
+            0
+          ],
+          "rotation": [
+            "math.sin(query.anim_time * 180) * 0.4",
+            0,
+            "math.sin(query.anim_time * 90) * 0.3"
+          ]
+        },
+        "tuning_knob": {
+          "rotation": [
+            0,
+            0,
+            "query.anim_time * 40"
+          ]
+        },
+        "volume_knob": {
+          "rotation": [
+            0,
+            0,
+            "-15 + math.sin(query.anim_time * 90) * 8"
+          ]
+        },
+        "antenna": {
+          "rotation": [
+            "5 + math.sin(query.anim_time * 200) * 8",
+            "math.sin(query.anim_time * 140) * 12",
+            "math.cos(query.anim_time * 160) * 6"
+          ]
+        },
+        "power_led": {
+          "scale": [
+            "1.1 + math.sin(query.anim_time * 360) * 0.15",
+            "1.1 + math.sin(query.anim_time * 360) * 0.15",
+            "1.1 + math.sin(query.anim_time * 360) * 0.15"
+          ]
+        },
+        "display": {
+          "scale": [
+            1,
+            "0.95 + math.sin(query.anim_time * 540) * 0.08",
+            1
+          ]
+        },
+        "handle": {
+          "rotation": [
+            "math.sin(query.anim_time * 100) * 1.5",
+            0,
+            0
+          ]
+        }
+      },
+      "particle_effects": {
+        "0.0": [
+          {
+            "effect": "notes",
+            "locator": "speaker_grill"
+          },
+          {
+            "effect": "waves",
+            "locator": "antenna"
+          }
+        ],
+        "0.5": [
+          {
+            "effect": "notes",
+            "locator": "speaker_grill"
+          }
+        ],
+        "1.0": [
+          {
+            "effect": "speaker_thump",
+            "locator": "speaker_grill"
+          },
+          {
+            "effect": "waves",
+            "locator": "antenna"
+          }
+        ],
+        "1.5": [
+          {
+            "effect": "notes",
+            "locator": "speaker_grill"
+          }
+        ]
+      }
+    }
+  }
+}

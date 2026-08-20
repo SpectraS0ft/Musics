@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.spectra_radio": {
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "query.property('spectra:powered') ? Texture.on : Texture.default"
+      ]
+    }
+  }
+}

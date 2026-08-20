@@ -1,0 +1,9 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/radio_speaker_flipbook",
+    "atlas_tile": "spectra_radio_speaker",
+    "ticks_per_frame": 3,
+    "frames": [0, 1, 2, 3],
+    "blend_frames": true
+  }
+]
