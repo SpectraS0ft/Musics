@@ -50,6 +50,10 @@ void Input::clearTouches() {
     touchPoints.clear();
 }
 
+void Input::clearAllTouches() {
+    touchPoints.clear();
+}
+
 bool Input::isSplitScreen() const {
     // Check if there are touches on both sides of screen
     bool leftSide = false;

@@ -5,3 +5,6 @@ APP_CPPFLAGS := -frtti -fexceptions
 APP_CFLAGS := -Wall
 APP_OPTIM := release
 NDK_TOOLCHAIN_VERSION := clang
+
+# Add native_app_glue include path
+APP_C_INCLUDES := $(NDK)/sources/android/native_app_glue

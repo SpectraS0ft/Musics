@@ -51,6 +51,7 @@ public:
     void onTouchBegin(int id, float x, float y);
     void onTouchMove(int id, float x, float y);
     void onTouchEnd(int id, float x, float y);
+    void onTouchCancel();
     
     void setScreenSize(int width, int height);
     

@@ -162,6 +162,10 @@ void Game::onTouchEnd(int id, float x, float y) {
     }
 }
 
+void Game::onTouchCancel() {
+    input.clearAllTouches();
+}
+
 void Game::setScreenSize(int width, int height) {
     input.setScreenSize(width, height);
     renderer.setScreenSize(width, height);

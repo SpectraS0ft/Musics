@@ -41,7 +41,10 @@ public:
     void setBotName(const std::string& name) { botName = name; }
     
     // AI Control
+    void update(float deltaTime) override; // AI-specific update
     void update(float deltaTime, const Math3D::Vector3& targetPos, 
+                const Math3D::Vector3& playerPos); // Overloaded version for game loop
+    void updateAI(float deltaTime, const Math3D::Vector3& targetPos, 
                 const Math3D::Vector3& playerPos);
     void think(float deltaTime);
     void makeDecision();

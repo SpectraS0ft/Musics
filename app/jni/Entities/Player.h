@@ -29,7 +29,7 @@ public:
     
     // Setters
     void setPlayerId(int id) { playerId = id; }
-    setIsHuman(bool human) { isHuman = human; }
+    void setIsHuman(bool human) { isHuman = human; }
     
     // Actions
     void addScore(int points);

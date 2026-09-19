@@ -77,12 +77,37 @@ void Renderer::renderHUD() {
 }
 
 void Renderer::renderSplitScreenDivider() {
-    // Draw vertical line in middle of screen
+    // Draw vertical line in middle of screen using OpenGL ES 3.0
     glDisable(GL_DEPTH_TEST);
-    glBegin(GL_LINES);
-    glVertex2f(screenWidth/2, 0);
-    glVertex2f(screenWidth/2, screenHeight);
-    glEnd();
+    
+    // Simple shader-based line rendering would go here
+    // For now, this is a placeholder - in real implementation,
+    // you would use a vertex buffer and shader to draw the line
+    
+    GLfloat vertices[] = {
+        screenWidth/2.0f, 0.0f, 0.0f,
+        screenWidth/2.0f, (float)screenHeight, 0.0f
+    };
+    
+    GLuint vao, vbo;
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
+    
+    glBindVertexArray(vao);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    // Enable vertex attribute
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    // Draw line
+    glDrawArrays(GL_LINES, 0, 2);
+    
+    // Cleanup
+    glDeleteBuffers(1, &vbo);
+    glDeleteVertexArrays(1, &vao);
+    
     glEnable(GL_DEPTH_TEST);
 }
 
