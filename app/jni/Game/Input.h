@@ -29,6 +29,7 @@ public:
     void moveTouch(int id, float x, float y);
     void removeTouch(int id);
     void clearTouches();
+    void clearAllTouches();
     
     const std::vector<TouchPoint>& getTouchPoints() const { return touchPoints; }
     

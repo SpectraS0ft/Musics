@@ -19,6 +19,7 @@ LOCAL_SRC_FILES := main.cpp \
                    Utils/Logger.cpp \
                    Utils/Math3D.cpp
 
+LOCAL_C_INCLUDES := $(NDK)/sources/android/native_app_glue
 LOCAL_CFLAGS    := -Wall -Werror
 LOCAL_CPPFLAGS  := -std=c++17 -frtti -fexceptions
 LOCAL_LDLIBS    := -llog -landroid -lEGL -lGLESv3 -lOpenSLES

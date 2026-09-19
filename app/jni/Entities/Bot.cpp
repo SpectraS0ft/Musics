@@ -66,6 +66,11 @@ void Bot::update(float deltaTime, const Math3D::Vector3& targetPos,
     Ship::update(deltaTime);
 }
 
+void Bot::updateAI(float deltaTime, const Math3D::Vector3& targetPos,
+                 const Math3D::Vector3& playerPos) {
+    update(deltaTime, targetPos, playerPos);
+}
+
 void Bot::think(float deltaTime) {
     static float thinkTimer = 0;
     thinkTimer += deltaTime;
