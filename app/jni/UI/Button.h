@@ -89,23 +89,23 @@ public:
 
 // Uzbek translations for common buttons
 namespace UzbekButtons {
-    const char* PLAY = "O'ynash";
-    const char* OPTIONS = "Sozlamalar";
-    const char* QUIT = "Chiqish";
-    const char* BACK = "Ortga";
-    const char* START = "Boshlash";
-    const char* PAUSE = "Tanaffus";
-    const char* RESUME = "Davom etish";
-    const char* RESTART = "Qayta boshlash";
-    const char* DIFFICULTY = "Qiyinchilik";
-    const char* MAPS = "Xaritalar";
-    const char* MODE = "Rejim";
-    const char* UPGRADES = "Yangilashlar";
-    const char* MULTIPLAYER = "Ko'p o'yinchi";
-    const char* SINGLE_PLAYER = "Yakka o'yinchi";
-    const char* EASY = "Oson";
-    const char* MEDIUM = "O'rta";
-    const char* HARD = "Qiyin";
+    inline constexpr const char* PLAY = "O'ynash";
+    inline constexpr const char* OPTIONS = "Sozlamalar";
+    inline constexpr const char* QUIT = "Chiqish";
+    inline constexpr const char* BACK = "Ortga";
+    inline constexpr const char* START = "Boshlash";
+    inline constexpr const char* PAUSE = "Tanaffus";
+    inline constexpr const char* RESUME = "Davom etish";
+    inline constexpr const char* RESTART = "Qayta boshlash";
+    inline constexpr const char* DIFFICULTY = "Qiyinchilik";
+    inline constexpr const char* MAPS = "Xaritalar";
+    inline constexpr const char* MODE = "Rejim";
+    inline constexpr const char* UPGRADES = "Yangilashlar";
+    inline constexpr const char* MULTIPLAYER = "Ko'p o'yinchi";
+    inline constexpr const char* SINGLE_PLAYER = "Yakka o'yinchi";
+    inline constexpr const char* EASY = "Oson";
+    inline constexpr const char* MEDIUM = "O'rta";
+    inline constexpr const char* HARD = "Qiyin";
 }
 
 #endif // BUTTON_H

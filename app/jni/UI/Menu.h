@@ -73,14 +73,14 @@ public:
 
 // Uzbek translations
 namespace MenuUzbek {
-    const char* TITLE = "Kosmik Jang Arenasi";
-    const char* MAIN_MENU = "Bosh Menyu";
-    const char* SELECT_MODE = "Rejim Tanlash";
-    const char* SELECT_DIFFICULTY = "Qiyinchilik Tanlash";
-    const char* SELECT_MAP = "Xarita Tanlash";
-    const char* GAME_OVER = "O'yin Tugadi";
-    const char* VICTORY = "G'alaba!";
-    const char* DEFEAT = "Mag'lubiyat";
+    inline constexpr const char* TITLE = "Kosmik Jang Arenasi";
+    inline constexpr const char* MAIN_MENU = "Bosh Menyu";
+    inline constexpr const char* SELECT_MODE = "Rejim Tanlash";
+    inline constexpr const char* SELECT_DIFFICULTY = "Qiyinchilik Tanlash";
+    inline constexpr const char* SELECT_MAP = "Xarita Tanlash";
+    inline constexpr const char* GAME_OVER = "O'yin Tugadi";
+    inline constexpr const char* VICTORY = "G'alaba!";
+    inline constexpr const char* DEFEAT = "Mag'lubiyat";
 }
 
 #endif // MENU_H
