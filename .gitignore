@@ -1,2 +1,61 @@
-build/out/
-build/Vintage_Radio.mcaddon
+```
+# Compiled and build artifacts
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+*.class
+*.pyc
+__pycache__/
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Build directories (common for C++/Android projects)
+build/
+dist/
+target/
+.gradle/
+
+# Android specific
+*.apk
+*.aar
+local.properties
+.settings/
+
+# NDK/JNI specific
+app/build/
+app/libs/
+app/obj/
+app/bin/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temp files
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Python caches
+.mypy_cache/
+.pytest_cache/
+```

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kosmik Jang Arenasi</string>
+    <string name="play">Oʻynash</string>
+    <string name="options">Sozlamalar</string>
+    <string name="quit">Chiqish</string>
+    <string name="back">Ortga</string>
+    <string name="start">Boshlash</string>
+    <string name="pause">Tanaffus</string>
+    <string name="resume">Davom etish</string>
+    <string name="restart">Qayta boshlash</string>
+    <string name="difficulty">Qiyinchilik</string>
+    <string name="maps">Xaritalar</string>
+    <string name="mode">Rejim</string>
+    <string name="upgrades">Yangilashlar</string>
+    <string name="multiplayer">Koʻp oʻyinchi</string>
+    <string name="single_player">Yakka oʻyinchi</string>
+    <string name="easy">Oson</string>
+    <string name="medium">Oʻrta</string>
+    <string name="hard">Qiyin</string>
+    <string name="campaign">Kampaniya</string>
+    <string name="survival">Yashash</string>
+    <string name="deathmatch">Oʻlim Match</string>
+    <string name="score">Hisob</string>
+    <string name="time">Vaqt</string>
+    <string name="health">Sogʻlik</string>
+    <string name="ammo">Oʻq-dori</string>
+    <string name="fire">Oʻt ochish</string>
+    <string name="boost">Tezlatish</string>
+    <string name="game_over">Oʻyin Tugadi</string>
+    <string name="victory">Gʻalaba!</string>
+    <string name="defeat">Magʻlubiyat</string>
+</resources>
